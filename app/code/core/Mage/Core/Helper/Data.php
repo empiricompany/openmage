@@ -1002,42 +1002,10 @@ XML;
     }
 
     /**
-     * Returns true if the rate limit of the current client is exceeded
-     * @param bool $setErrorMessage Adds a predefined error message to the 'core/session' object
-     * @param bool $recordRateLimitHit
-     * @return bool is rate limit exceeded
+     * @return bool
      */
-    public function isRateLimitExceeded(bool $setErrorMessage = true, bool $recordRateLimitHit = true): bool
+    public function isFormKeyEnabled(): bool
     {
-        $active = Mage::getStoreConfigFlag('system/rate_limit/active');
-        if ($active && $remoteAddr = Mage::helper('core/http')->getRemoteAddr()) {
-            $cacheTag = 'rate_limit_' . $remoteAddr;
-            if (Mage::app()->testCache($cacheTag)) {
-                if ($setErrorMessage) {
-                    $errorMessage = $this->__("Too Soon: You are trying to perform this operation too frequently. Please wait a few seconds and try again.");
-                    Mage::getSingleton('core/session')->addError($errorMessage);
-                }
-                return true;
-            }
-
-            if ($recordRateLimitHit) {
-                $this->recordRateLimitHit();
-            }
-        }
-
-        return false;
-    }
-
-    /**
-     * Save the client rate limit hit to the cache
-     * @return void
-     */
-    public function recordRateLimitHit(): void
-    {
-        $active = Mage::getStoreConfigFlag('system/rate_limit/active');
-        if ($active && $remoteAddr = Mage::helper('core/http')->getRemoteAddr()) {
-            $cacheTag = 'rate_limit_' . $remoteAddr;
-            Mage::app()->saveCache(1, $cacheTag, ['brute_force'], Mage::getStoreConfig('system/rate_limit/timeframe'));
-        }
+        return Mage::getStoreConfigFlag(Mage_Core_Controller_Front_Action::XML_CSRF_USE_FLAG_CONFIG_PATH);
     }
 }
