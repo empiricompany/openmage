@@ -76,7 +76,6 @@ button {
   &.cancel {
     background: $color_cinnabar_approx;
     color: $white;
-    padding: 0 13px;
 
     span {
       background: none;
@@ -91,7 +90,6 @@ button {
   &.delete {
     background: $color_cinnabar_approx;
     color: $white;
-    padding: 0 13px;
 
     span {
       background: none;
@@ -105,7 +103,6 @@ button {
 
   &.save {
     @extend %extend_23;
-    padding: 0 13px;
 
     span {
       background: none;
@@ -121,7 +118,7 @@ button {
     }
 
     &:hover {
-      background-color: $color_action;
+      @extend %extend_24;
     }
 
     &.disabled {
@@ -131,7 +128,6 @@ button {
 
   &.ok_button {
     @extend %extend_23;
-    padding: 0 13px;
 
     span {
       background: none;
@@ -147,7 +143,7 @@ button {
     }
 
     &:hover {
-      background-color: $color_action;
+      @extend %extend_24;
     }
 
     &.disabled {
@@ -157,7 +153,6 @@ button {
 
   &.add {
     @extend %extend_23;
-    padding: 0 13px;
 
     span {
       background: none;
@@ -173,7 +168,7 @@ button {
     }
 
     &:hover {
-      background-color: $color_action;
+      @extend %extend_24;
     }
 
     &.disabled {
@@ -185,9 +180,25 @@ button {
     }
   }
 
-  &.back {
-    background: none;
+  &:focus {
+    @extend %extend_24;
+  }
 
+  &:active {
+    @extend %extend_24;
+  }
+
+  &:hover {
+    @extend %extend_24;
+  }
+
+  &.back {
+    background: none !important;
+    border: 0;
+    outline: none;
+    color: $black;
+    
+/* 
     span {
       background: none;
       padding: 0;
@@ -196,6 +207,9 @@ button {
     &:before {
       content: "«";
       padding-right: 4px;
+    } */
+    &:hover span {
+      text-decoration: underline
     }
   }
 
@@ -239,7 +253,6 @@ button {
   &.fail {
     background: $color_cinnabar_approx;
     color: $white;
-    padding: 0 13px;
 
     &:hover {
       background: $color_coral_red_approx;
@@ -249,7 +262,6 @@ button {
   &.cancel_button {
     background: $color_cinnabar_approx;
     color: $white;
-    padding: 0 13px;
 
     &:hover {
       background: $color_coral_red_approx;
@@ -291,6 +303,11 @@ button {
     padding: 0;
   }
 }
+
+.content-header button {
+  padding: 8px 12px !important;
+}
+
 
 .form-button {
   @extend %extend_20;
@@ -364,6 +381,7 @@ button[disabled] {
   &.scope-label {
     color: $color_martini_approx;
     font-size: 11px;
+    vertical-align: middle;
   }
 
   &.value {
