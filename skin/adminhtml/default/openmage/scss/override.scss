@@ -47,25 +47,25 @@ label {
 
 a {
   display: inline;
-  color: $color_curious_blue_approx;
-  text-decoration: none;
+  color: #B80294;
+  text-decoration: underline;
 
   &:visited {
-    color: $color_curious_blue_approx;
+    /* color: #B80294; */
   }
 
   &:focus {
-    color: $color_astral_approx;
+    color: #B80294;
     text-decoration: none;
   }
 
   &:hover {
-    color: $color_astral_approx;
+    color: #B80294;
     text-decoration: none;
   }
 
   &:active {
-    color: $color_astral_approx;
+    color: #B80294;
     text-decoration: none;
   }
 
@@ -153,9 +153,24 @@ small {
 }
 
 .switcher {
-  background: none;
-  padding: 0 0 10px;
+  font-size: 12px;
+  background: #f6f6f6;
+  border: 2px solid $color_alto_approx !important;
+  /* max-width: 250px; */
   border: none;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  & label {
+    color: #B80294;
+    font-weight: 600;
+  }
+  p, select {
+    margin: 0 !important;
+  }
+  & a {
+    text-decoration: underline;
+  }
 }
 
 .entry-edit {
@@ -167,8 +182,8 @@ small {
     h4 {
       color: $color_dark_grey;
       line-height: 32px;
-      font-size: 16px;
-      font-weight: 300;
+      font-size: 18px;
+      font-weight: 600;
     }
 
     .tools {
@@ -217,7 +232,7 @@ small {
     td {
       border: 1px solid $color_alto_approx;
       background: $white;
-      padding: 5px;
+      padding: 8px;
 
       &.first {
         border-right: 1px solid $color_alto_approx;
@@ -250,15 +265,15 @@ small {
 
   tr {
     &.filter {
-      background: $white !important;
+      background: #f6f6f6 !important;
 
       th {
         border: 1px solid $color_alto_approx;
         border-top: 0;
 
-        &.sorted {
-          background: darken($white, 3%) !important;
-        }
+/*         &.sorted {
+          background: darken(#f6f6f6, 3%) !important;
+        } */
       }
 
       .range {
@@ -286,14 +301,14 @@ small {
       }
 
       .date img {
-        @include replaceImage(icon-calendar($color_action),17px,17px);
+        @include replaceImage(icon-calendar($black),17px,17px);
         margin-top: 5px;
       }
     }
 
     &.headings {
-      background: $color_boulder_approx;
-      border: 1px solid $color_boulder_approx;
+      background: $black;
+      border: 1px solid $black;
 
       th {
         padding: 4px;
@@ -301,25 +316,34 @@ small {
         vertical-align: middle;
         color: $white;
         font-weight: 400;
+        padding: 6px 8px;
 
+        &.sorted a {
+          color: #EB02BC;
+        }
         a {
           color: $white;
           font-weight: 400;
+          padding: 0;
 
           &:hover {
-            color: $color_alto_approx;
+            color: #EB02BC
           }
 
           &.sort-arrow-desc {
             @extend %extend_6;
 
             span.sort-title {
+              padding: 0;
+              display: flex;
+              align-items: center;
+              gap: 8px;
               background: none;
 
               &:after {
                 @extend %extend_7;
                 border-width: 6px 5px 0 5px;
-                border-color: $color_alto_approx transparent transparent transparent;
+                border-color: #EB02BC transparent transparent transparent;
               }
             }
           }
@@ -329,11 +353,15 @@ small {
 
             span.sort-title {
               background: none;
+              padding: 0;
+              display: flex;
+              align-items: center;
+              gap: 8px;
 
               &:after {
                 @extend %extend_7;
                 border-width: 0 5px 6px 5px;
-                border-color: transparent transparent $color_alto_approx transparent;
+                border-color: transparent transparent #EB02BC transparent;
               }
             }
           }
@@ -341,7 +369,6 @@ small {
 
         &.no-link {
           color: $white;
-          padding: 4px;
         }
       }
     }
@@ -366,13 +393,13 @@ small {
       background: $color_wild_sand_approx !important;
     }
 
-    tr.even td.sorted {
+    /* tr.even td.sorted {
       background: darken($color_gallery_approx, 3%) !important;
     }
 
     tr.odd td.sorted {
       background: darken($white, 3%) !important;
-    }
+    } */
 
     tr.selected td.sorted {
       background: darken($color_alice_blue_approx, 3%) !important;
@@ -385,7 +412,7 @@ small {
 }
 
 .header {
-  background: $openmage_base_blue;
+  background: $black;
   position: relative;
 }
 
@@ -421,10 +448,12 @@ small {
     line-height: 40px;
     input.input-text {
       width: 250px;
-      border: 0 solid #FF666E73;
+      height: 40px;
+      border: 0;
+      border-radius: 4px;
       margin-top: -4px;
       background-color: $white;
-      padding-left: 10px;
+      padding: 8px 16px !important;
       min-width: 250px;
       //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
       transition: width 100ms;
@@ -470,8 +499,8 @@ ul {
 
         &.active {
           border: 0;
-          background: $color_boulder_approx;
-          color: $white !important;
+          background: $white;
+          color: $black !important;
         }
       }
     }
@@ -495,14 +524,14 @@ ul {
 
       &.active {
         @extend %extend_9;
-        border-left: 3px solid $color_boulder_approx;
+        border-left: 3px solid #B80294;
         padding: 8px 18px;
         border-bottom: 1px solid $color_gallery_approx;
 
         span {
           padding: 0;
           background: none;
-          font-weight: 400;
+          font-weight: 600;
         }
       }
 
@@ -514,7 +543,7 @@ ul {
 
           span {
             background: none;
-            font-weight: 400;
+            font-weight: 600;
           }
         }
       }
@@ -533,7 +562,7 @@ ul {
     text-transform: none;
     padding: 7px 7px 7px 10px;
     font-size: 18px;
-    background: $color_boulder_approx;
+    background: $black;
     color: $white;
   }
 }
@@ -544,7 +573,7 @@ ul {
 }
 
 .nav-bar {
-  background: $openmage_base_blue;
+  background: $black;
   border: 0;
 }
 
@@ -667,7 +696,9 @@ div {
   }
 
   .entry-edit fieldset span.form_row, .entry-edit fieldset span.field-row {
-    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
   }
 
   .entry-edit .field-row label {
@@ -1008,7 +1039,7 @@ dl.accordion dt {
 }
 
 table.actions {
-  padding: 15px;
+  padding: 16px;
   background: $white;
   border: 1px solid $color_alto_approx;
 
@@ -1127,17 +1158,17 @@ ul.tabs a.changed span.changed {
 
 .pager {
   img[src$='pager_arrow_left.gif'].arrow {
-      @include replaceImage(icon-arrow-left($color_action),17px,17px);
+      @include replaceImage(icon-arrow-left($black),17px,17px);
     }
   img[src$='pager_arrow_right.gif'].arrow {
-      @include replaceImage(icon-arrow-right($color_action),17px,17px);
+      @include replaceImage(icon-arrow-right($black),17px,17px);
     }
   img[src$='pager_arrow_left_off.gif'].arrow {
-    @include replaceImage(icon-arrow-left($color_action),17px,17px);
+    @include replaceImage(icon-arrow-left($black),17px,17px);
     opacity: 0.5;
   }
   img[src$='pager_arrow_right_off.gif'].arrow {
-    @include replaceImage(icon-arrow-right($color_action),17px,17px);
+    @include replaceImage(icon-arrow-right($black),17px,17px);
     opacity: 0.5;
   }
 
@@ -1150,7 +1181,7 @@ ul.tabs a.changed span.changed {
 }
 
 img[src$='grid-cal.gif'] {
-  @include replaceImage(icon-calendar($color_action),17px,17px);
+  @include replaceImage(icon-calendar($black),17px,17px);
 }
 
 .link-store-scope {
