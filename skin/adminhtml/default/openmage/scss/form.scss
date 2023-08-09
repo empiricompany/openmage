@@ -335,6 +335,10 @@ button {
 }
 
 
+button.task {
+  background: #500093;
+}
+
 .form-button {
   @extend %extend_20;
 

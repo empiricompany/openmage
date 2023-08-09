@@ -301,6 +301,10 @@ button.add-variable span {
   font-size: 14px;
 }
 
+button.task {
+  background: #500093;
+}
+
 .form-button:hover {
   background: #888;
 }
