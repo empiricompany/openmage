@@ -113,8 +113,8 @@ small {
 }
 
 .content-header-floating {
-  opacity: 0.9;
-  background: #000;
+  opacity: 1;
+  background: rgba(0, 0, 0, .6);
   color: #fff;
   border-bottom: solid 1px $color_silver_approx;
 
@@ -125,6 +125,10 @@ small {
   h3 {
     font-size: 20px;
     color: #fff;
+  }
+
+  button {
+    color: #fff !important;
   }
 
   td {
