@@ -40,10 +40,11 @@ select, textarea, input.input-text {
   outline-width: 2px; */
   /* outline-offset: 2px; */
   border: 0;
+  border-radius: 4px;
   cursor: pointer;
   display: inline-block;
   font-family: "Inter", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   line-height: 23px;
   box-sizing: border-box;
@@ -72,10 +73,11 @@ select, textarea, input.input-text {
   outline-width: 2px; */
   /* outline-offset: 2px; */
   border: 0;
+  border-radius: 4px;
   cursor: pointer;
   display: inline-block;
   /* font-family: $font_0, $font_1, $font_2, $font_3, $font_4; */
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   /* line-height: 26px; */
   box-sizing: border-box;
@@ -109,9 +111,11 @@ textarea {
 }
 textarea:disabled {
   background: #fafafa;
+  color: gray;
 }
 textarea.disabled {
   background: #fafafa;
+  color: gray;
 }
 
 select {
@@ -121,21 +125,50 @@ select {
   text-transform: none;
   margin: 0;
 }
+select option:disabled, select:disabled option {
+  text-shadow: none;
+}
 select.disabled {
   background: #fafafa;
+  color: gray;
 }
 select:disabled {
   background: #fafafa;
+  color: gray;
 }
 select optgroup {
   font-weight: 600;
 }
 
+input,
+textarea,
+select,
+.field-100 textarea,
+.field-100 input.input-text {
+  transition: border-color 100ms ease-in;
+}
+input:hover,
+textarea:hover,
+select:hover,
+.field-100 textarea:hover,
+.field-100 input.input-text:hover {
+  border-color: gray !important;
+}
+input:focus,
+textarea:focus,
+select:focus,
+.field-100 textarea:focus,
+.field-100 input.input-text:focus {
+  border-color: #ff00cc !important;
+}
+
 input[type=text].disabled {
   background: #fafafa;
+  color: gray;
 }
 input[type=text]:disabled {
   background: #fafafa;
+  color: gray;
 }
 
 select[multiple] {
@@ -209,7 +242,7 @@ button.back:hover span {
   text-decoration: underline;
 }
 button:hover {
-  background: #888;
+  background: #660052;
 }
 button.disabled {
   background: #888;
@@ -265,6 +298,7 @@ button.add-variable span {
 
 .content-header button {
   padding: 8px 12px !important;
+  font-size: 14px;
 }
 
 .form-button:hover {
@@ -292,7 +326,7 @@ button.add-variable span {
   vertical-align: middle;
 }
 .form-list td.value {
-  padding-left: 0 !important;
+  /* padding-left: 0 !important; */
 }
 .form-list td.value textarea {
   width: 324px;
@@ -301,7 +335,7 @@ button.add-variable span {
   width: 330px;
 }
 .form-list td.value p.note {
-  color: #000;
+  /* color: $color_dorado_approx; */
   font-size: 11px;
   font-weight: 400;
 }

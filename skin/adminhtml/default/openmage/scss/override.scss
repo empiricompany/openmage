@@ -114,6 +114,8 @@ small {
 
 .content-header-floating {
   opacity: 0.9;
+  background: #000;
+  color: #fff;
   border-bottom: solid 1px $color_silver_approx;
 
   .content-header {
@@ -121,7 +123,8 @@ small {
   }
 
   h3 {
-    font-size: 18px;
+    font-size: 20px;
+    color: #fff;
   }
 
   td {
@@ -155,8 +158,9 @@ small {
 .switcher {
   font-size: 12px;
   background: #f6f6f6;
-  border: 2px solid $color_alto_approx !important;
+  border: 1px solid $color_alto_approx !important;
   /* max-width: 250px; */
+  border-radius: 6px;
   border: none;
   display: inline-flex;
   flex-direction: column;
@@ -231,6 +235,8 @@ small {
 
     td {
       border: 1px solid $color_alto_approx;
+      border-right-style: dashed;
+      border-width: 0 1px 0 0;
       background: $white;
       padding: 8px;
 
@@ -249,27 +255,30 @@ small {
     }
 
     tbody tr {
+      td {
+        transition: background-color 0.1s linear;
+      }
       &.selected td {
-        background: $color_alice_blue_approx;
+        background: #feffd8;
       }
 
       &:hover td {
-        background: $color_alice_blue_approx;
+        background: #feffd8;
       }
 
       &:nth-child(odd):hover td {
-        background: $color_alice_blue_approx;
+        background: #feffd8;
       }
     }
   }
 
   tr {
     &.filter {
-      background: #f6f6f6 !important;
+      background: #e6e6e6 !important;
 
       th {
-        border: 1px solid $color_alto_approx;
-        border-top: 0;
+        border-right-style: dashed;
+        border-width: 0 1px 0 0;
 
 /*         &.sorted {
           background: darken(#f6f6f6, 3%) !important;
@@ -307,23 +316,25 @@ small {
     }
 
     &.headings {
-      background: $black;
-      border: 1px solid $black;
+      
+      background: linear-gradient(to bottom, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
+      border: 1px solid #d1cfcf;
 
       th {
         padding: 4px;
-        font-size: 12px;
+        font-size: 14px;
         vertical-align: middle;
-        color: $white;
-        font-weight: 400;
+        border-color: #c4c4c4 #d1cfcf #e6e6e6 #d1cfcf;
+        color: $black;
+        font-weight: 600;
         padding: 6px 8px;
 
         &.sorted a {
           color: #EB02BC;
         }
         a {
-          color: $white;
-          font-weight: 400;
+          color: $black;
+          font-weight: 600;
           padding: 0;
 
           &:hover {
@@ -368,18 +379,19 @@ small {
         }
 
         &.no-link {
-          color: $white;
+          color: lighten($black, 30);
+          padding: 6px 8px;
         }
       }
     }
 
-    &.even {
+    &.odd {
       td {
-        background: $color_gallery_approx;
+        background: #f6f6f6;
       }
 
       tr td {
-        background: $color_gallery_approx;
+        background: #f6f6f6;
       }
     }
   }
@@ -406,13 +418,28 @@ small {
     }
   }
 
+  td input.massaction-checkbox {
+    aspect-ratio: 1 / 1;
+    width: 18px;
+    height: 18px;
+  }
+
   td input.input-text {
     min-width: 80px;
   }
 }
 
+
+input[type=checkbox]:not(.l-tcb) {
+  aspect-ratio: 1 / 1;
+  width: 18px;
+  height: 18px;
+}
+
+
 .header {
-  background: $black;
+  /* backgrondu: #e60056; */
+  background: #000;
   position: relative;
 }
 
@@ -432,6 +459,11 @@ small {
       width: auto;
     }
   }
+}
+
+.demo-notice {
+  background: #e60056;
+  display: none;
 }
 
 .header-right {
@@ -686,13 +718,27 @@ div {
 }
 
 .massaction {
-  background: none;
-  border: 0;
+  background: #f6f6f6;
   font-size: 12px;
+  a {
+    color: #000;
+    text-decoration: underline;
+    &:hover {
+      color: #ff00cc;
+      text-decoration: none;
+    }
+  }
+  strong[id*="_massaction-count"] {
+    background: #ff00cc;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-right: 2px;
+  }
 
   td {
     border-top: 0;
-    padding: 10px 0;
+    padding: 10px;
   }
 
   .entry-edit fieldset span.form_row, .entry-edit fieldset span.field-row {
@@ -1039,12 +1085,21 @@ dl.accordion dt {
 }
 
 table.actions {
-  padding: 16px;
-  background: $white;
-  border: 1px solid $color_alto_approx;
-
-  td {
-    vertical-align: middle;
+  /* background: $white;
+  border: 1px solid $color_alto_approx; */
+  tr {
+    display: flex;
+    align-items: center;
+    place-content: space-between;
+  }
+  td.pager {
+    padding: 10px;
+    background: #fff;
+    border: 1px solid lightgray !important;
+    border-radius: 6px;
+    .link-feed {
+      margin: 0;
+    }
   }
 }
 
@@ -1158,17 +1213,17 @@ ul.tabs a.changed span.changed {
 
 .pager {
   img[src$='pager_arrow_left.gif'].arrow {
-      @include replaceImage(icon-arrow-left($black),17px,17px);
+      @include replaceImage(icon-arrow-left($black),24px,24px);
     }
   img[src$='pager_arrow_right.gif'].arrow {
-      @include replaceImage(icon-arrow-right($black),17px,17px);
+      @include replaceImage(icon-arrow-right($black),24px,24px);
     }
   img[src$='pager_arrow_left_off.gif'].arrow {
-    @include replaceImage(icon-arrow-left($black),17px,17px);
+    @include replaceImage(icon-arrow-left($black),24px,24px);
     opacity: 0.5;
   }
   img[src$='pager_arrow_right_off.gif'].arrow {
-    @include replaceImage(icon-arrow-right($black),17px,17px);
+    @include replaceImage(icon-arrow-right($black),24px,24px);
     opacity: 0.5;
   }
 
@@ -1176,12 +1231,12 @@ ul.tabs a.changed span.changed {
 
 .export {
   img {
-    @include replaceImage(icon-export($color_apple_approx),19px,19px);
+    @include replaceImage(icon-export($color_apple_approx),24px,24px);
   }
 }
 
 img[src$='grid-cal.gif'] {
-  @include replaceImage(icon-calendar($black),17px,17px);
+  @include replaceImage(icon-calendar($black),18px,18px);
 }
 
 .link-store-scope {
