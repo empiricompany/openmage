@@ -19,10 +19,12 @@ textarea {
 
   &:disabled {
     background: $color_wild_sand_approx;
+    color: gray;
   }
 
   &.disabled {
     background: $color_wild_sand_approx;
+    color: gray;
   }
 }
 
@@ -33,13 +35,18 @@ select {
   box-sizing: border-box;
   text-transform: none;
   margin: 0;
-
+  option:disabled,
+  &:disabled option {
+    text-shadow: none;
+  }
   &.disabled {
     background: $color_wild_sand_approx;
+    color: gray;
   }
 
   &:disabled {
     background: $color_wild_sand_approx;
+    color: gray;
   }
 
   optgroup {
@@ -47,13 +54,31 @@ select {
   }
 }
 
+input,
+textarea,
+select,
+.field-100 textarea ,
+.field-100 input.input-text {
+
+  transition: border-color 100ms ease-in;
+  &:hover {
+    border-color: gray !important;
+  }
+  &:focus {
+    border-color: #ff00cc !important;
+  }
+
+}
+
 input[type=text] {
   &.disabled {
     background: $color_wild_sand_approx;
+    color: gray;
   }
 
   &:disabled {
     background: $color_wild_sand_approx;
+    color: gray;
   }
 }
 
@@ -222,7 +247,7 @@ button {
   }
 
   &:hover {
-    background: $color_gray_approx;
+    background: darken(#ff00cc, 30);
   }
 
   &.disabled {
@@ -306,6 +331,7 @@ button {
 
 .content-header button {
   padding: 8px 12px !important;
+  font-size: 14px;
 }
 
 
@@ -385,7 +411,7 @@ button[disabled] {
   }
 
   &.value {
-    padding-left: 0 !important;
+    /* padding-left: 0 !important; */
 
     textarea {
       width: 324px;
@@ -396,7 +422,7 @@ button[disabled] {
     }
 
     p.note {
-      color: $color_dorado_approx;
+      /* color: $color_dorado_approx; */
       font-size: 11px;
       font-weight: 400;
     }
