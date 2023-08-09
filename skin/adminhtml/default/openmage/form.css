@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* ! Do not edit css files !
    Edit scss version and compile with sass from scss folder like this:
    $ sass form.scss ../form.css
@@ -66,7 +65,7 @@ select, textarea, input.input-text {
 
 .form-button.ok_button, button.add, button.ok_button, button.save {
   background-image: none;
-  background-color: #eb02bc;
+  background-color: #ff00cc;
   color: #fff;
   /* outline-color: darken($color_action, 10);
   outline-style: solid;
@@ -82,10 +81,11 @@ select, textarea, input.input-text {
   /* line-height: 26px; */
   box-sizing: border-box;
   vertical-align: middle;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
 }
 
 .form-button.ok_button:active, .form-button.ok_button:focus, button:hover, button:active, button:focus, button.add:hover, button.add:active, button.add:focus, button.ok_button:hover, button.ok_button:active, button.ok_button:focus, button.save:hover, button.save:active, button.save:focus {
-  background-color: #b80294;
+  background-color: #cc00a3;
   outline: 1px solid #ff00cc;
   color: #fff;
   transition: all ease-in 100ms;
@@ -226,6 +226,7 @@ button.back {
   background: none !important;
   border: 0;
   outline: none;
+  text-shadow: none !important;
   color: #000;
 }
 button.back span {
@@ -233,7 +234,7 @@ button.back span {
   padding: 0;
 }
 button.back:before {
-  content: "«";
+  content: "<-";
   padding-right: 4px;
 }
 button.back:hover span {
@@ -297,6 +298,7 @@ button.add-variable span {
 .content-header button {
   padding: 8px 12px !important;
   font-size: 14px;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
 }
 
 button.task {
@@ -307,7 +309,7 @@ button.task {
   background: #888;
 }
 .form-button.ok_button:hover {
-  background-color: #eb02bc;
+  background-color: #ff00cc;
 }
 .form-button.large {
   font-size: 22px;
