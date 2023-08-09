@@ -161,16 +161,17 @@ small {
 
 .switcher {
   font-size: 12px;
-  background: #f6f6f6;
-  border: 1px solid $color_alto_approx !important;
-  /* max-width: 250px; */
+  background: #e6e6e6;
+  /* border: 1px solid #b80294 !important; */
+  max-width: fit-content;
   border-radius: 6px;
   border: none;
-  display: inline-flex;
+  /* display: inline-flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 4px; */
+  margin: 4px 0;
   & label {
-    color: #B80294;
+    color: #000;
     font-weight: 600;
   }
   p, select {
@@ -761,6 +762,8 @@ div {
 }
 
 .icon-head {
+  background-image: none;
+  padding-left: 0;
   background-position: left center;
 }
 
