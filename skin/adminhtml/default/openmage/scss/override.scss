@@ -115,7 +115,7 @@ small {
 .content-header-floating {
   opacity: 1;
   background: rgba(0, 0, 0, .6);
-  color: #fff;
+  color: #fff !important;
   border-bottom: solid 1px $color_silver_approx;
 
   .content-header {
@@ -124,7 +124,7 @@ small {
 
   h3 {
     font-size: 20px;
-    color: #fff;
+    color: #fff !important;
   }
 
   button {
@@ -133,6 +133,7 @@ small {
 
   td {
     padding-right: 0;
+    vertical-align: middle;
   }
 
   .form-buttons {
@@ -146,7 +147,7 @@ small {
   padding-bottom: 0;
   h3 {
     @extend %extend_3;
-    margin: 0 0.3em 0.3em;
+    /* margin: 0 0.3em 0.3em; */
     line-height: 32px;
   }
 }
@@ -435,7 +436,8 @@ small {
 }
 
 
-input[type=checkbox]:not(.l-tcb) {
+input[type=checkbox]:not(.l-tcb),
+input[type="radio"] {
   aspect-ratio: 1 / 1;
   width: 18px;
   height: 18px;
