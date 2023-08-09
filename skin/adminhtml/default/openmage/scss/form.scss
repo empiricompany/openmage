@@ -223,7 +223,7 @@ button {
     outline: none;
     color: $black;
     
-/* 
+
     span {
       background: none;
       padding: 0;
@@ -232,7 +232,7 @@ button {
     &:before {
       content: "«";
       padding-right: 4px;
-    } */
+    }
     &:hover span {
       text-decoration: underline
     }
@@ -336,7 +336,7 @@ button {
 
 
 button.task {
-  background: #500093;
+  background: darken(#eb02bc, 16);
 }
 
 .form-button {

@@ -227,16 +227,14 @@ button.back {
   border: 0;
   outline: none;
   color: #000;
-  /* 
-      span {
-        background: none;
-        padding: 0;
-      }
-
-      &:before {
-        content: "«";
-        padding-right: 4px;
-      } */
+}
+button.back span {
+  background: none;
+  padding: 0;
+}
+button.back:before {
+  content: "«";
+  padding-right: 4px;
 }
 button.back:hover span {
   text-decoration: underline;
@@ -302,7 +300,7 @@ button.add-variable span {
 }
 
 button.task {
-  background: #500093;
+  background: #9a017b;
 }
 
 .form-button:hover {

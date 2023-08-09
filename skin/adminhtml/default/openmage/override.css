@@ -258,14 +258,17 @@ small {
 }
 
 .content-header-floating {
-  opacity: 0.9;
-  background: #000;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.6);
   color: #fff;
   border-bottom: solid 1px #c8c8c8;
 }
 .content-header-floating h3 {
   font-size: 20px;
   color: #fff;
+}
+.content-header-floating button {
+  color: #fff !important;
 }
 .content-header-floating td {
   padding-right: 0;
