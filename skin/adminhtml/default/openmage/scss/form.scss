@@ -221,6 +221,7 @@ button {
     background: none !important;
     border: 0;
     outline: none;
+    text-shadow: none !important;
     color: $black;
     
 
@@ -230,7 +231,7 @@ button {
     }
 
     &:before {
-      content: "«";
+      content: "<-";
       padding-right: 4px;
     }
     &:hover span {
@@ -332,6 +333,7 @@ button {
 .content-header button {
   padding: 8px 12px !important;
   font-size: 14px;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, .25);
 }
 
 

@@ -147,8 +147,8 @@ small {
   padding-bottom: 0;
   h3 {
     @extend %extend_3;
-    /* margin: 0 0.3em 0.3em; */
-    line-height: 32px;
+    margin: 0;
+    line-height: 40px;
   }
 }
 
@@ -164,16 +164,20 @@ small {
   font-size: 12px;
   background: #e6e6e6;
   /* border: 1px solid #b80294 !important; */
-  max-width: fit-content;
+  /* max-width: fit-content; */
   border-radius: 6px;
   border: none;
-  /* display: inline-flex;
-  flex-direction: column;
-  gap: 4px; */
+  /* display: flex;
+  align-items: center;
+  gap: 4px;
+  & > * {
+    min-width: fit-content;
+  } */
   margin: 4px 0;
   & label {
     color: #000;
     font-weight: 600;
+    line-height: 26px;
   }
   p, select {
     margin: 0 !important;
@@ -332,15 +336,16 @@ small {
         vertical-align: middle;
         border-color: #c4c4c4 #d1cfcf #e6e6e6 #d1cfcf;
         color: $black;
-        font-weight: 600;
+        font-weight: 500;
         padding: 6px 8px;
 
         &.sorted a {
-          color: #EB02BC;
+          /* color: #EB02BC; */
+          font-weight: 600;
         }
         a {
           color: $black;
-          font-weight: 600;
+          font-weight: 500;
           padding: 0;
 
           &:hover {
@@ -725,7 +730,8 @@ div {
 }
 
 .massaction {
-  background: #f6f6f6;
+  background: none;
+  border: 0;
   font-size: 12px;
   a {
     color: #000;
@@ -738,6 +744,7 @@ div {
   strong[id*="_massaction-count"] {
     background: #ff00cc;
     color: white;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, .25);
     padding: 2px 6px;
     border-radius: 4px;
     margin-right: 2px;
@@ -745,7 +752,7 @@ div {
 
   td {
     border-top: 0;
-    padding: 10px;
+    padding: 10px 0 10px 10px;
   }
 
   .entry-edit fieldset span.form_row, .entry-edit fieldset span.field-row {
@@ -846,8 +853,7 @@ div {
 
 .messages {
   li {
-    font-weight: 400 !important;
-    font-size: 12px !important;
+    font-weight: 500 !important;
     padding: 10px 26px 10px 35px !important;
     min-height: inherit !important;
   }
@@ -1096,6 +1102,9 @@ dl.accordion dt {
 table.actions {
   /* background: $white;
   border: 1px solid $color_alto_approx; */
+  border-bottom: 1px solid #e6e6e6;
+  margin-bottom: 0;
+
   tr {
     display: flex;
     align-items: center;
@@ -1103,9 +1112,9 @@ table.actions {
   }
   td.pager {
     padding: 10px;
-    background: #fff;
+/*     background: #fff;
     border: 1px solid lightgray !important;
-    border-radius: 6px;
+    border-radius: 6px; */
     .link-feed {
       margin: 0;
     }
@@ -1187,6 +1196,7 @@ ul.tabs a.changed span.changed {
 .notification-global {
   background: $color_merino_approx icon-warning($color-warning) 27px 5px no-repeat;
   background-size: 15px;
+  font-size: 12px;
 }
 
 #page-help-link {
