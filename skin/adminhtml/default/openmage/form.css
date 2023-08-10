@@ -32,7 +32,7 @@ select, textarea, input.input-text {
 
 .form-button, button {
   background-image: none;
-  background: #000;
+  background: #222f3e;
   color: #fff;
   /* outline-color: darken($white, 10);
   outline-style: solid;
@@ -227,7 +227,7 @@ button.back {
   border: 0;
   outline: none;
   text-shadow: none !important;
-  color: #000;
+  color: #222f3e;
 }
 button.back span {
   background: none;
@@ -302,7 +302,7 @@ button.add-variable span {
 }
 
 button.task {
-  background: #9a017b;
+  background: #000;
 }
 
 .form-button:hover {

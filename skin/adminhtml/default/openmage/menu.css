@@ -61,7 +61,7 @@
   left: -10000px;
 }
 #nav li:hover ul a {
-  color: #000;
+  color: #222f3e;
   font-size: 16px;
 }
 #nav li:hover ul li:hover ul {
@@ -75,7 +75,7 @@
 }
 #nav li.active {
   margin-left: -1px;
-  color: #000;
+  color: #222f3e;
   font-weight: bold;
 }
 #nav li.active em {
@@ -117,7 +117,7 @@
 }
 #nav li.level0:hover > a {
   background: white;
-  color: #000;
+  color: #222f3e;
 }
 #nav li.parent a {
   cursor: default;
@@ -150,7 +150,7 @@
   text-decoration: none;
   float: left;
   padding: 0 12px;
-  color: #000;
+  color: #222f3e;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -171,13 +171,13 @@
   padding: 0;
 }
 #nav ul li.active a {
-  color: #000;
+  color: #222f3e;
   font-size: 16px;
 }
 #nav ul li a {
   background: #fff;
   padding: 9px 12px;
-  color: #000;
+  color: #222f3e;
   font-size: 16px;
 }
 #nav ul li a.active {
@@ -185,7 +185,7 @@
 }
 #nav ul li a:hover {
   background: #e6e6e6;
-  color: #000;
+  color: #222f3e;
 }
 #nav ul li.parent a {
   background-position: 100% 100%;
@@ -235,7 +235,7 @@
 #nav .level0.active > a {
   font-weight: 600;
   background: white;
-  color: #000;
+  color: #222f3e;
 }
 
 #usermenu {
@@ -273,7 +273,7 @@
   display: block;
 }
 #usermenu li:hover ul a {
-  color: #000;
+  color: #222f3e;
   text-decoration: none;
   background: #fff;
   display: block;
