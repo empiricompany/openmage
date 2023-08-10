@@ -1265,3 +1265,13 @@ img[src$='grid-cal.gif'] {
 .emph, .accent {
   color: $color_action !important;
 }
+
+.rating-box {
+  width: 100px;
+  height: 20px;
+  background-size: 20px;
+  .rating {
+    height: 20px;
+    background-size: 20px;
+  }
+}

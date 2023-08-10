@@ -1182,4 +1182,14 @@ img[src$="grid-cal.gif"] {
 
 .emph, .accent {
   color: #ff00cc !important;
+}
+
+.rating-box {
+  width: 100px;
+  height: 20px;
+  background-size: 20px;
+}
+.rating-box .rating {
+  height: 20px;
+  background-size: 20px;
 }/*# sourceMappingURL=override.css.map */
