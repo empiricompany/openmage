@@ -19,7 +19,7 @@
 @import url("https://fonts.bunny.net/css?family=inter:400,500,600,700&amp;display=swap");
 .form-button {
   background-image: none;
-  background: #000;
+  background: #222f3e;
   color: #fff;
   /* outline-color: darken($white, 10);
   outline-style: solid;
