@@ -65,7 +65,7 @@ select, textarea, input.input-text {
 
 .form-button.ok_button, button.add, button.ok_button, button.save {
   background-image: none;
-  background-color: #ff00cc;
+  background-color: #222f3e;
   color: #fff;
   /* outline-color: darken($color_action, 10);
   outline-style: solid;
@@ -296,6 +296,7 @@ button.add-variable span {
 }
 
 .content-header button {
+  background-color: #ff00cc;
   padding: 8px 12px !important;
   font-size: 14px;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
