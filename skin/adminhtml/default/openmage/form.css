@@ -347,6 +347,11 @@ button.task {
   width: 324px;
 }
 
+.entry-edit-head button,
+table.data button {
+  background: #222f3e;
+}
+
 .input-text.large {
   padding: 12px 12px 14px;
   font-size: 18px;

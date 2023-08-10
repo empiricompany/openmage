@@ -457,6 +457,11 @@ fieldset[disabled] button {
   }
 }
 
+.entry-edit-head button,
+table.data button {
+  background: $black;
+}
+
 .input-text.large {
   padding: 12px 12px 14px;
   font-size: 18px;
