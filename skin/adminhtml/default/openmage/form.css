@@ -22,6 +22,7 @@ select, textarea, input.input-text {
   border: 1px solid #c8c8c8;
   border-radius: 4px;
   box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
 }
 
 .form-list td.label label, .form-list td.label {
