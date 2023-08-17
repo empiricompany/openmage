@@ -101,6 +101,11 @@
   font-weight: 600;
   font-size: 18px;
   line-height: 32px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-direction: row-reverse;
+  place-content: start;
 }
 
 //original selectors
@@ -108,14 +113,14 @@
 %extend_11 {
   content: "";
   display: block;
-  position: absolute;
+  /* position: absolute;
   right: 0;
-  bottom: 10px;
+  bottom: 10px; */
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 8px 6px 0 6px;
-  border-color: $color_gray_approx transparent transparent transparent;
+  border-width: 6px 0 6px 8px;
+  border-color: transparent transparent transparent $color_gray_approx;
 }
 
 //original selectors
@@ -123,14 +128,14 @@
 %extend_12 {
   content: "";
   display: block;
-  position: absolute;
+  /* position: absolute;
   right: 0;
-  bottom: 10px;
+  bottom: 10px; */
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 0 6px 8px 6px;
-  border-color: transparent transparent $color_gray_approx transparent;
+  border-width: 8px 6px 0 6px;
+  border-color: darken($color_action, 20) transparent transparent transparent;
 }
 
 //original selectors
