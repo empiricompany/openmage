@@ -576,7 +576,7 @@ ul.tabs-horiz {
 }
 ul.tabs-horiz li {
   border: none;
-  margin: 0 10px 0 0;
+  margin: 0;
 }
 ul.tabs-horiz li a {
   background: #eee;
@@ -585,11 +585,19 @@ ul.tabs-horiz li a {
   font-weight: 300;
   padding: 9px 15px;
   border: 0;
+  border-top: 3px solid #eee;
+  border-left: 1px solid #fafafa;
+  border-right: 1px solid #fafafa;
+  border-bottom: 1px solid #D3D3D3;
 }
-ul.tabs-horiz li a.active {
+ul.tabs-horiz li a.active, ul.tabs-horiz li a:hover {
   border: 0;
-  background: #fff;
+  background: linear-gradient(to bottom, #fff, #fafafa);
   color: #222f3e !important;
+  border-top: 3px solid #cc00a3;
+  border-left: 1px solid #D3D3D3;
+  border-right: 1px solid #D3D3D3;
+  padding-bottom: 10px;
 }
 ul.tabs {
   background: none;
