@@ -77,32 +77,37 @@ dl.accordion dt.open a, dl.accordion dt a:hover, dl.accordion dt a, div.collapse
   font-weight: 600;
   font-size: 18px;
   line-height: 32px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-direction: row-reverse;
+  place-content: start;
 }
 
 dl.accordion dt a:after, div.collapseable a:after {
   content: "";
   display: block;
-  position: absolute;
+  /* position: absolute;
   right: 0;
-  bottom: 10px;
+  bottom: 10px; */
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 8px 6px 0 6px;
-  border-color: #888 transparent transparent transparent;
+  border-width: 6px 0 6px 8px;
+  border-color: transparent transparent transparent #888;
 }
 
 dl.accordion dt.open a:after, div.collapseable a.open:after {
   content: "";
   display: block;
-  position: absolute;
+  /* position: absolute;
   right: 0;
-  bottom: 10px;
+  bottom: 10px; */
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 0 6px 8px 6px;
-  border-color: transparent transparent #888 transparent;
+  border-width: 8px 6px 0 6px;
+  border-color: #99007a transparent transparent transparent;
 }
 
 .warning-msg, .success-msg, .error-msg, .notice-msg {
