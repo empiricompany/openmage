@@ -1158,7 +1158,10 @@ table.actions {
 }
 
 .wrapper-popup .content-header table {
-  width: 90%;
+  /* width: 90%; */
+}
+.popup-window #contents-uploader {
+  background: #e6e6e6;
 }
 
 .tier .data {
