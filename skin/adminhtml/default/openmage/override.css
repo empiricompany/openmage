@@ -25,9 +25,9 @@
   width: 100%;
 }
 
-.content-header h3, .content-header {
+.popup-window .content-header h3, .content-header h3, .content-header {
   border: 0;
-  color: #222f3e;
+  color: #222f3e !important;
   font-size: 26px;
   font-weight: 600;
 }
