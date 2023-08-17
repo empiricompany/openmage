@@ -113,7 +113,7 @@ button {
   }
 
   &.delete {
-    background: $color_cinnabar_approx;
+    background: $color_cinnabar_approx !important;
     color: $white;
 
     span {

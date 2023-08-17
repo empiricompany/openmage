@@ -198,7 +198,7 @@ button.cancel:hover {
   background: #fa4545;
 }
 button.delete {
-  background: #e63a3a;
+  background: #e63a3a !important;
   color: #fff;
 }
 button.delete span {
