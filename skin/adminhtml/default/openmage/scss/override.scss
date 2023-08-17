@@ -531,7 +531,7 @@ ul {
 
     li {
       border: none;
-      margin: 0 10px 0 0;
+      margin: 0;
 
       a {
         background: $color_gallery_approx;
@@ -540,11 +540,20 @@ ul {
         font-weight: 300;
         padding: 9px 15px;
         border: 0;
+        border-top: 3px solid $color_gallery_approx;
+        border-left: 1px solid #fafafa;
+        border-right: 1px solid #fafafa;
+        border-bottom: 1px solid #D3D3D3;
 
-        &.active {
+        &.active,
+        &:hover {
           border: 0;
-          background: $white;
+          background: linear-gradient(to bottom, #fff, #fafafa);
           color: $black !important;
+          border-top: 3px solid darken($color_action, 10);
+          border-left: 1px solid #D3D3D3;
+          border-right: 1px solid #D3D3D3;
+          padding-bottom: 10px;
         }
       }
     }
