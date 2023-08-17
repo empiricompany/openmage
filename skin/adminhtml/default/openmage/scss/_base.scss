@@ -24,7 +24,7 @@
 //.content-header, .content-header h3
 %extend_3 {
   border: 0;
-  color: $black;
+  color: $black !important;
   font-size: 26px;
   font-weight: 600;
 }
