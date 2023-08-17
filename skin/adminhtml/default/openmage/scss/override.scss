@@ -553,22 +553,22 @@ ul {
   &.tabs {
     background: none;
     color: $color_dark_grey;
-    border-top: 0;
+    border-top-color: #d3d3d3;
 
     dl {
-      background: $white;
+      background: #eee;
       border: 1px solid $color_alto_approx;
     }
 
     a {
-      background: $white;
+      background: #eee;
       color: $color_dark_grey;
       padding: 8px 18px;
       border-bottom: 1px solid $color_gallery_approx;
 
       &.active {
         @extend %extend_9;
-        border-left: 3px solid #B80294;
+        border-left: 3px solid #222F3E;
         padding: 8px 18px;
         border-bottom: 1px solid $color_gallery_approx;
 
