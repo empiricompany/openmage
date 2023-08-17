@@ -553,24 +553,25 @@ ul {
   &.tabs {
     background: none;
     color: $color_dark_grey;
-    border-top-color: #d3d3d3;
+    border-top: 0;
 
     dl {
       background: #eee;
-      border: 1px solid $color_alto_approx;
+      border: 1px solid #fafafa;
     }
 
     a {
       background: #eee;
       color: $color_dark_grey;
       padding: 8px 18px;
-      border-bottom: 1px solid $color_gallery_approx;
+      border-bottom: 1px solid #fafafa;
 
       &.active {
         @extend %extend_9;
-        border-left: 3px solid #222F3E;
+        border-left: 3px solid darken($color_action, 10);
         padding: 8px 18px;
-        border-bottom: 1px solid $color_gallery_approx;
+        border-bottom: 1px solid #D3D3D3;
+        border-top: 1px solid #D3D3D3;
 
         span {
           padding: 0;
@@ -581,7 +582,7 @@ ul {
 
       &:hover {
         @extend %extend_9;
-
+        border-left: 3px solid darken($color_action, 10);
         &.active {
           padding: 8px 18px;
 
