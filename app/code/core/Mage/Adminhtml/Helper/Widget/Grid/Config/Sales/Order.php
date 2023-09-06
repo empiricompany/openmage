@@ -24,7 +24,7 @@ class Mage_Adminhtml_Helper_Widget_Grid_Config_Sales_Order extends Mage_Adminhtm
 {
     /**
      * Collection object
-     * @param Mage_Catalog_Model_Resource_Product_Collection $collection
+     * @param Mage_Sales_Model_Resource_Order_Grid_Collection $collection
      *
      * return $this
      */

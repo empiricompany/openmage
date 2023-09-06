@@ -682,7 +682,7 @@ class Mage_Adminhtml_Block_Widget_Grid extends Mage_Adminhtml_Block_Widget
             if ($this->getCollection() instanceof Mage_Sales_Model_Resource_Order_Grid_Collection) {
                 $this->setAdvancedGridHelperName('adminhtml/widget_grid_config_sales_order');
             }
-            
+
             $this->_advancedGridHelper = Mage::helper($this->getAdvancedGridHelperName());
 
             if (!($this->_advancedGridHelper instanceof Mage_Adminhtml_Helper_Widget_Grid_Config_Abstract)) {
