@@ -683,9 +683,9 @@ class Mage_Adminhtml_Block_Widget_Grid extends Mage_Adminhtml_Block_Widget
                 case 'super_product_links':
                     $this->setAdvancedGridHelperName('adminhtml/widget_grid_config_catalog_product');
                     break;
-            }
-            if ($this->getCollection() instanceof Mage_Sales_Model_Resource_Order_Grid_Collection) {
-                $this->setAdvancedGridHelperName('adminhtml/widget_grid_config_sales_order');
+                case 'sales_order_grid':
+                    $this->setAdvancedGridHelperName('adminhtml/widget_grid_config_sales_order');
+                    break;
             }
 
             $this->_advancedGridHelper = Mage::helper($this->getAdvancedGridHelperName());
