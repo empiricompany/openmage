@@ -55,7 +55,7 @@ class Mage_Adminhtml_Helper_Widget_Grid_Config_Sales_Order extends Mage_Adminhtm
         $gridBlock->addColumn('order.customer_email', array(
             'header' => Mage::helper('sales')->__('Customer Email'),
             'index' => 'customer_email',
-            'filterindex' => 'sales_order.customer_email',
+            'filter_index' => 'sales_order.customer_email',
             'type' => 'text',
         ));
     }
