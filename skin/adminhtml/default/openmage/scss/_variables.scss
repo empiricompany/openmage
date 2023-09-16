@@ -1,8 +1,8 @@
 //colors
-$openmage_base_blue: #3A499D;
+$openmage_base_blue: #B80294;
 
 $color_dolphin_approx: #68666f;
-$color_wild_sand_approx: #f6f6f6;
+$color_wild_sand_approx: #fafafa;
 $color_curious_blue_approx: #269de7;
 $color_astral_approx: #3378a3;
 $color_white_approx: #fefefe;
@@ -33,7 +33,7 @@ $mine_shaft_15: rgba(50, 50, 50, 0.15);
 $color_alabaster_approx: #f8f8f8;
 $color_apple_approx: #56af45;
 $color_casablanca_approx: #f0ad4e;
-$color_dorado_approx: darken($openmage_base_blue,19);
+$color_dorado_approx: #000;
 $color_geyser_approx: #d6e2e5;
 $black_18_0392: rgba(0, 0, 0, 0.180392);
 $color_bahama_blue_approx: #026294;
@@ -45,7 +45,7 @@ $color_picton_blue_approx: #34abfa;
 $color_allports_approx: #006aa9;
 $color_fiord_approx: #456;
 $color_your_pink_approx: #fbb;
-$black: #000;
+$black: #222f3e;
 $color_solitude_approx: #def;
 $color_cornflower_approx: #8fc4e8;
 $color_guardsman_red_approx: #d50000;
@@ -63,10 +63,10 @@ $menu_padding_h: 12px;
 
 $color-warning: $color_guardsman_red_approx;
 $color-help: #00a9ff;
-$color_action: #0090FF;
+$color_action: #ff00cc;
 
 //fonts
-$font_0: Open Sans;
+$font_0: 'Inter';
 $font_1: Helvetica Neue;
 $font_2: Helvetica;
 $font_3: Arial;

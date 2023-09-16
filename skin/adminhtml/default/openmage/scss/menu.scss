@@ -6,8 +6,8 @@
 @import "base";
 
 .nav-bar {
-  background: $openmage_base_blue;
-  padding: 0 350px 0 70px;
+  background: transparent;
+  padding: 0 350px 8px 70px;
 
   &:after {
     content: ".";
@@ -27,11 +27,12 @@
     text-align: left;
     float: left;
 
-    &.over {
+    &:hover {
       z-index: 999;
 
       a {
         color: $color_geyser_approx;
+        font-size: 16px;
       }
 
       ul {
@@ -42,18 +43,18 @@
         }
 
         a {
-          color: $color_dorado_approx;
-          font-size: 12px;
+          color: $black;
+          font-size: 16px;
         }
 
-        li.over ul {
+        li:hover ul {
           left: 100px;
 
           ul {
             left: -10000px;
           }
 
-          li.over ul {
+          li:hover ul {
             left: 100px;
           }
         }
@@ -62,7 +63,7 @@
 
     &.active {
       margin-left: -1px;
-      color: $white;
+      color: $black;
       font-weight: bold;
 
       em {
@@ -80,34 +81,36 @@
     }
 
     &.level0 {
+      margin-inline: 2px;
       > a {
         text-transform: none;
         font-weight: 400;
         color: $white;
         height: 38px;
         line-height: 38px;
+        font-size: 16px;
 
         &:hover {
-          background: darken($openmage_base_blue,10);
+          background: darken($white,10);
           color: $white;
         }
       }
 
       li.parent > a:after {
         content: "";
-        position: absolute;
+        /* position: absolute; */
         right: $menu_padding_h;
         bottom: $menu_padding_v;
         width: 0;
         height: 0;
         border-style: solid;
         border-width: 5px 0 5px 6px;
-        border-color: transparent transparent transparent $color_silver_approx;
+        border-color: transparent transparent transparent darken(#EB02BC, 20);
       }
 
-      &.over > a {
-        background: darken($openmage_base_blue,12);
-        color: $white;
+      &:hover > a {
+        background: lighten($white,12);
+        color: $black;
       }
     }
 
@@ -163,11 +166,14 @@
     text-decoration: none;
     float: left;
     padding: 0 12px;
-    color: $white;
+    color: $black;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    place-content: space-between;
 
     &:hover {
-      display: block;
+      display: flex;
       text-decoration: none;
     }
   }
@@ -188,20 +194,23 @@
         @extend %extend_17;
 
         a {
-          color: $color_dorado_approx;
-          font-size: 12px;
+          color: $black;
+          font-size: 16px;
         }
       }
 
       a {
         background: $white;
         padding: $menu_padding_v $menu_padding_h;
-        color: $color_dorado_approx;
-        font-size: 12px;
+        color: $black;
+        font-size: 16px;
 
+        &.active {
+          text-decoration: underline;
+        }
         &:hover {
-          background: $color_dorado_approx;
-          color: $white;
+          background: #e6e6e6;
+          color: $black;
         }
       }
 
@@ -229,7 +238,7 @@
         }
       }
 
-      &.over a {
+      &:hover a {
         font-weight: normal;
 
         &:hover {
@@ -272,7 +281,8 @@
 
     &.active > a {
       font-weight: 600;
-      background: darken($openmage_base_blue,14);
+      background: lighten($white,14);
+      color: $black;
     }
   }
 }
@@ -313,14 +323,17 @@
         padding: 0 10px;
       }
     }
-    &.over ul {
+    &:hover ul {
       right: 27px;
       display: block;
       a {
-        color: $header_background;
+        color: $black;
         text-decoration: none;
-        background: $color-main-xs;
+        background: $white;
         display: block;
+        &:hover {
+          background: darken($white, 10);
+        }
       }
     }
   }
