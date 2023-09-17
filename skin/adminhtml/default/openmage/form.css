@@ -66,7 +66,7 @@ select, textarea, input.input-text {
 
 .form-button.ok_button, button.add, button.ok_button, button.save {
   background-image: none;
-  background-color: #ff00cc;
+  background-color: #0090ff;
   color: #fff;
   /* outline-color: darken($color_action, 10);
   outline-style: solid;
@@ -86,7 +86,7 @@ select, textarea, input.input-text {
 }
 
 .form-button.ok_button:active, .form-button.ok_button:focus, button:hover, button:active, button:focus, button.add:hover, button.add:active, button.add:focus, button.ok_button:hover, button.ok_button:active, button.ok_button:focus, button.save:hover, button.save:active, button.save:focus {
-  background-color: #cc00a3;
+  background-color: #0073cc;
   outline: 1px solid #ff00cc;
   color: #fff;
   transition: all ease-in 100ms;
@@ -310,7 +310,7 @@ button.task {
   background: #888;
 }
 .form-button.ok_button:hover {
-  background-color: #ff00cc;
+  background-color: #0090ff;
 }
 .form-button.large {
   font-size: 22px;
