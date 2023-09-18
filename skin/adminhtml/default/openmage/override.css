@@ -619,7 +619,7 @@ ul.tabs a {
   border-bottom: 1px solid #fafafa;
 }
 ul.tabs a.active {
-  border-left: 3px solid #0073cc;
+  border-left: 3px solid #ff00cc;
   padding: 8px 18px;
   border-bottom: 1px solid #D3D3D3;
   border-top: 1px solid #D3D3D3;
@@ -630,7 +630,7 @@ ul.tabs a.active span {
   font-weight: 600;
 }
 ul.tabs a:hover {
-  border-left: 3px solid #0073cc;
+  border-left: 3px solid #ff00cc;
 }
 ul.tabs a:hover.active {
   padding: 8px 18px;

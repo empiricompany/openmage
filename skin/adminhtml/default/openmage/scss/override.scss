@@ -576,7 +576,7 @@ ul {
 
       &.active {
         @extend %extend_9;
-        border-left: 3px solid darken($color_action, 10);
+        border-left: 3px solid #ff00cc;
         padding: 8px 18px;
         border-bottom: 1px solid #D3D3D3;
         border-top: 1px solid #D3D3D3;
@@ -590,7 +590,7 @@ ul {
 
       &:hover {
         @extend %extend_9;
-        border-left: 3px solid darken($color_action, 10);
+        border-left: 3px solid #ff00cc;
         &.active {
           padding: 8px 18px;
 
