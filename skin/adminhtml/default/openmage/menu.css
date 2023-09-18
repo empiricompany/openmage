@@ -183,6 +183,9 @@
 #nav ul li a.active {
   text-decoration: underline;
 }
+#nav ul li a.active {
+  text-decoration: underline;
+}
 #nav ul li a:hover {
   background: #e6e6e6;
   color: #222f3e;
