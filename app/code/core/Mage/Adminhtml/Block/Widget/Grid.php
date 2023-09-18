@@ -688,17 +688,17 @@ class Mage_Adminhtml_Block_Widget_Grid extends Mage_Adminhtml_Block_Widget
                 'toggle_columns_order_button',
                 $this->getLayout()->createBlock('adminhtml/widget_button')
                     ->setData([
-                        'class'        => 'toggle_columns_order_button',
-                        'label'     => Mage::helper('adminhtml')->__('Sort Columns'),
+                        'class' => 'toggle_columns_order_button',
+                        'label' => Mage::helper('adminhtml')->__('Rearrange Columns'),
                     ])
             );
             $this->setChild(
                 'reset_columns_order_button',
                 $this->getLayout()->createBlock('adminhtml/widget_button')
                     ->setData([
-                        'label'     => Mage::helper('adminhtml')->__('Reset Columns Order'),
-                        'class'        => 'reset_columns_order_button delete',
-                        'onclick'   => $this->getAdvancedGridBlock()->getJsObjectName() . '.resetColumnsOrder()',
+                        'label'   => Mage::helper('adminhtml')->__('Reset Columns Order'),
+                        'class'   => 'reset_columns_order_button delete',
+                        'onclick' => $this->getAdvancedGridBlock()->getJsObjectName() . '.resetColumnsOrder()',
                     ])
             );
         }
@@ -767,11 +767,16 @@ class Mage_Adminhtml_Block_Widget_Grid extends Mage_Adminhtml_Block_Widget
         if ($_orderColumns) {
             // Reset Column Order
             $this->_columnsOrder = [];
-            // TODO Deprecated functionality: uksort(): Returning bool from comparison function is deprecated, return an integer less than, equal to, or greater than zero
-            @uksort($this->_columns, function ($a, $b) use ($_orderColumns) {
+            uksort($this->_columns, function ($a, $b) use ($_orderColumns) {
                 $posA = array_search($a, $_orderColumns);
                 $posB = array_search($b, $_orderColumns);
-                return $posA > $posB;
+                if ($posA > $posB) {
+                    return 1;
+                }
+                if ($posA < $posB) {
+                    return -1;
+                }
+                return 0;
             });
         } else {
             $this->sortColumnsByOrder();
