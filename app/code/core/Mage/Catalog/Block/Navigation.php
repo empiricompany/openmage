@@ -102,7 +102,7 @@ class Mage_Catalog_Block_Navigation extends Mage_Core_Block_Template
             if ($category) {
                 $this->_currentCategoryKey = $category->getPath();
             } else {
-                $this->_currentCategoryKey = Mage::app()->getStore()->getRootCategoryId();
+                $this->_currentCategoryKey = Mage::app()->getStore()->getRootCategoryPath();
             }
         }
 
