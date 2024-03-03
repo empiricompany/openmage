@@ -49,8 +49,7 @@ select, textarea, input.input-text {
   line-height: 23px;
   box-sizing: border-box;
   margin: 0;
-  vertical-align: middle;
-}
+  vertical-align: middle; }
 
 .form-button:active, .form-button:focus, button:active, button:focus {
   background: #fafafa;
@@ -61,8 +60,7 @@ select, textarea, input.input-text {
 .form-button[disabled] fieldset[disabled] button, button[disabled], .form-button.disabled, button.disabled {
   cursor: default;
   pointer-events: none;
-  opacity: 0.5;
-}
+  opacity: 0.5; }
 
 .form-button.ok_button, button.add, button.ok_button, button.save {
   background-image: none;
@@ -95,14 +93,12 @@ select, textarea, input.input-text {
 fieldset[disabled] button.ok_button, fieldset[disabled] button.add, fieldset[disabled] button.save, button.ok_button[disabled], button.add[disabled], button.save[disabled], button.add.disabled, button.ok_button.disabled, button.save.disabled {
   cursor: default;
   pointer-events: none;
-  opacity: 0.5;
-}
+  opacity: 0.5; }
 
 .field-100 input.input-text, .field-100 textarea {
   float: none;
   border: 1px solid #c8c8c8 !important;
-  padding: 1px 3px !important;
-}
+  padding: 1px 3px !important; }
 
 input {
   vertical-align: middle;
@@ -173,14 +169,105 @@ input[type=text]:disabled {
 }
 
 select[multiple] {
-  height: auto;
-}
+  height: auto; }
 
 select[size] {
-  height: auto;
-}
+  height: auto; }
 
 button {
+  text-transform: none; }
+  button span {
+    padding: 0; }
+  button.cancel {
+    background: #e63a3a;
+    color: #fff;
+    padding: 0 13px; }
+    button.cancel span {
+      background: none;
+      padding: 0; }
+    button.cancel:hover {
+      background: #fa4545; }
+  button.delete {
+    background: #e63a3a;
+    color: #fff;
+    padding: 0 13px; }
+    button.delete span {
+      background: none;
+      padding: 0; }
+    button.delete:hover {
+      background: #fa4545; }
+  button.save {
+    padding: 0 13px; }
+    button.save span {
+      background: none;
+      padding: 0; }
+    button.save:hover {
+      background-color: #0090FF; }
+  button.ok_button {
+    padding: 0 13px; }
+    button.ok_button span {
+      background: none;
+      padding: 0; }
+    button.ok_button:hover {
+      background-color: #0090FF; }
+  button.add {
+    padding: 0 13px; }
+    button.add span {
+      background: none;
+      padding: 0; }
+    button.add:hover {
+      background-color: #0090FF; }
+    button.add.disabled span {
+      background: none; }
+  button.back {
+    background: none; }
+    button.back span {
+      background: none;
+      padding: 0; }
+    button.back:before {
+      content: "«";
+      padding-right: 4px; }
+  button:hover {
+    background: #888; }
+  button.disabled {
+    background: #888; }
+    button.disabled:hover {
+      background: #888; }
+    button.disabled:active {
+      background: #888; }
+  button.fail {
+    background: #e63a3a;
+    color: #fff;
+    padding: 0 13px; }
+    button.fail:hover {
+      background: #fa4545; }
+  button.cancel_button {
+    background: #e63a3a;
+    color: #fff;
+    padding: 0 13px; }
+    button.cancel_button:hover {
+      background: #fa4545; }
+  button.icon-btn {
+    width: auto !important; }
+    button.icon-btn span {
+      text-indent: 0;
+      width: auto;
+      display: inline; }
+  button.large {
+    font-size: 22px;
+    padding: 14px 22px 16px; }
+  button.add-image span {
+    background: none;
+    padding: 0; }
+  button.add-widget span {
+    background: none;
+    padding: 0; }
+  button.go span {
+    background: none;
+    padding: 0; }
+  button.add-variable span {
+    background: none;
+    padding: 0; }
   text-transform: none;
 }
 button span {
@@ -307,15 +394,13 @@ button.task {
 }
 
 .form-button:hover {
-  background: #888;
-}
+  background: #888; }
 .form-button.ok_button:hover {
   background-color: #0090ff;
 }
 .form-button.large {
   font-size: 22px;
-  padding: 14px 22px 16px;
-}
+  padding: 14px 22px 16px; }
 
 .field-100 {
   background: none;
@@ -323,8 +408,7 @@ button.task {
   padding: 0;
 }
 .form-list td.label label {
-  padding: 0 15px 0 0;
-}
+  padding: 0 15px 0 0; }
 .form-list td.scope-label {
   color: #999;
   font-size: 11px;
@@ -355,5 +439,40 @@ table.data button {
 
 .input-text.large {
   padding: 12px 12px 14px;
-  font-size: 18px;
-}/*# sourceMappingURL=form.css.map */
+  font-size: 18px; }
+
+td:has(input.swatch-option) {
+  display: flex;
+  gap: 2px; }
+  td:has(input.swatch-option) .swatch-delete {
+    cursor: pointer;
+    width: 14px;
+    height: 14px;
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+    background: #e63a3a;
+    color: #fff;
+    border-radius: 2px; }
+  td:has(input.swatch-option) .swatch-option {
+    width: 26px !important;
+    height: 26px; }
+
+td:has(input.swatch-disabled) {
+  background-image: url('data:image/svg+xml,<svg id="e5490f2e-3f54-4acd-9496-57eed667c240" data-name="Livello 1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 28.41093 28.29249"><title>placeholder</title><rect x="1.20546" y="1.08375" width="26" height="26" fill="%23fff" stroke="%23ccc" stroke-miterlimit="10"/><line x1="0.70546" y1="27.58375" x2="27.70546" y2="0.70875" fill="none" stroke="%23ff003a" stroke-miterlimit="10" stroke-width="2"/></svg>');
+  background-repeat: no-repeat;
+  outline: 1px solid #c8c8c8;
+  border: 1px solid #fff;
+  padding: 0;
+  margin: 2px;
+  width: 24px;
+  height: 24px;
+  display: block;
+  background-position: center center;
+  border-radius: 2px; }
+  td:has(input.swatch-disabled) .swatch-option {
+    opacity: 0; }
+  td:has(input.swatch-disabled) .swatch-delete {
+    display: none; }
+
+/*# sourceMappingURL=form.css.map */
