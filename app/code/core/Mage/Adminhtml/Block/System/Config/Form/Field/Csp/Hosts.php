@@ -7,6 +7,8 @@ declare(strict_types=1);
  * @link       /COPYING.txt
  * @license    Open Software License (OSL 3.0)
  * @package    Mage_Csp
+ * @copyright  Copyright (c) 2025 The OpenMage Contributors (https://www.openmage.org)
+ * @license    https://opensource.org/licenses/afl-3.0.php Academic Free License (AFL 3.0)
  */
 
 /**
@@ -146,7 +148,7 @@ class Mage_Adminhtml_Block_System_Config_Form_Field_Csp_Hosts extends Mage_Admin
         return '<input type="text" name="' . $inputName . '" value="#{' . $columnName . '}" ' .
             '#{readonly}' .
             ($column['size'] ? 'size="' . $column['size'] . '"' : '') . ' class="' .
-            ($column['class'] ?? 'input-text') . '"' .
+            ($column['class'] ?? 'input-text required-entry') . '"' .
             (isset($column['style']) ? ' style="' . $column['style'] . '"' : '') . '/>';
     }
 }

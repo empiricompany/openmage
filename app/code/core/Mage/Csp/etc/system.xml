@@ -10,7 +10,7 @@
 <config>
     <sections>
         <csp translate="label" module="csp">
-            <label>CSP protection</label>
+            <label>CSP Protection</label>
             <tab>advanced</tab>
             <sort_order>300</sort_order>
             <show_in_default>1</show_in_default>
@@ -18,7 +18,7 @@
             <show_in_store>1</show_in_store>
             <groups>
                 <frontend translate="label">
-                    <label>CSP protection Frontend</label>
+                    <label>CSP Protection Frontend</label>
                     <sort_order>100</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
@@ -202,7 +202,7 @@
                     </fields>
                 </frontend>
                 <adminhtml translate="label">
-                    <label>CSP protection Admin</label>
+                    <label>CSP Protection Admin</label>
                     <sort_order>200</sort_order>
                     <show_in_default>1</show_in_default>
                     <fields>

@@ -329,6 +329,16 @@
       app/code/core/Mage/Cron/**/*
     ]
 
+'Component: Csp':
+  - changed-files:
+    - any-glob-to-any-file: [
+      app/code/core/Mage/Csp/*,
+      app/code/core/Mage/Csp/**/*,
+      app/design/adminhtml/*/*/layout/csp.xml,
+      app/design/adminhtml/*/*/template/system/config/form/field/csp.phtml,
+      app/design/frontend/*/*/layout/csp.xml
+    ]
+
 'Component: CurrencySymbol':
   - changed-files:
     - any-glob-to-any-file: [

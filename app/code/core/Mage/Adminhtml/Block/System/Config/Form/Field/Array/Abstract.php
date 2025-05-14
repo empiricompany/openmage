@@ -183,4 +183,27 @@ abstract class Mage_Adminhtml_Block_System_Config_Form_Field_Array_Abstract exte
         }
         return parent::_toHtml();
     }
+
+    public function isEenabledAddAfterButton(): bool
+    {
+        return $this->_addAfter;
+    }
+
+    public function getAddButtonLabel(): string
+    {
+        return $this->_addButtonLabel;
+    }
+
+    public function getColumns(): array
+    {
+        return $this->_columns;
+    }
+
+    /**
+     * @throws Exception
+     */
+    public function renderColumn(string $columnName): string
+    {
+        return Mage::helper('core')->jsQuoteEscape($this->_renderCellTemplate($columnName));
+    }
 }
